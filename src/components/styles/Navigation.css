@@ -19,3 +19,11 @@
 .card-grid {
   width: 50%;
 }
+
+.btn1 {
+  background-color: var(--color1);
+}
+
+.btn2 {
+  background-color: var(--color2);
+}
