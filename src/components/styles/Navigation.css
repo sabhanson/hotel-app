@@ -1,53 +1,51 @@
-.card-container {
-  height: 100vh;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--atomic-tangerine);
-}
-
-.card-box {
-  height: 40vh;
-  width: 70%;
-  /* background-color: pink; */
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-}
-
-.card-grid {
-  width: 50%;
-}
-
 .btn-style {
   width: 100%;
   height: 75px;
   font-size: 1rem;
   border: none;
-  border: 1px inset black;
+  overflow-x: visible;
+  /* border: 1px inset black; */
 }
 
 .btn1 {
   background-color: var(--color1);
+  border-right: 2px solid var(--color1);
 }
 
 .btn2 {
   background-color: var(--color2);
+  border-right: 2px solid var(--color2);
 }
 
 .btn3 {
   background-color: var(--color3);
+  border-right: 2px solid var(--color3);
 }
 
 .btn4 {
   background-color: var(--color4);
+  border-right: 2px solid var(--color4);
 }
 
 .btn5 {
   background-color: var(--color5);
+  border-right: -20px solid var(--color5);
 }
 
 ul {
   padding-top: 150px;
+}
+
+.active {
+  color: aliceblue;
+}
+
+.setting-div {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.icon {
+  color: var(--color5);
 }

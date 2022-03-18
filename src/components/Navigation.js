@@ -13,10 +13,12 @@ import Reservation from "./../pages/Reservation";
 import Restaurant from "./../pages/Restaurant";
 import SpaFitness from "./../pages/SpaFitness";
 import Happenings from "./../pages/Happenings";
+import SettingsIcon from "@mui/icons-material/Settings";
 
-const drawerWidth = 300;
+const drawerWidth = "30%";
 
 export default function Navigation() {
+  const [active, setActive] = useState(false);
   const [currentPage, setCurrentPage] = useState("DASHBOARD");
 
   const renderPage = () => {
@@ -69,7 +71,11 @@ export default function Navigation() {
           ].map((text, index) => (
             <li>
               <button
-                className={`btn${index + 1} btn-style`}
+                className={
+                  currentPage === `${text}`
+                    ? `btn${index + 1} btn-style active`
+                    : `btn${index + 1} btn-style`
+                }
                 onClick={() => handlePageChange(text)}
               >
                 {text}
@@ -78,15 +84,10 @@ export default function Navigation() {
           ))}
         </ul>
         <Divider />
+        <div className="setting-div">
+          <SettingsIcon className="icon" />
+        </div>
       </Drawer>
-      {/* <div className="card-container">
-        <Box className="card-box">
-          <div className="card-grid">one</div>
-          <div className="card-grid">two</div>
-          <div className="card-grid">three</div>
-          <div className="card-grid">four</div>
-        </Box>
-      </div> */}
       {renderPage()}
     </Box>
   );
