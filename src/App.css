@@ -1,9 +1,13 @@
-root {
+:root {
   --blue-yonder: #586ba4ff;
   --dark-cornflower-blue: #324376ff;
   --buff: #f5dd90ff;
   --atomic-tangerine: #f68e5fff;
   --bittersweet: #f76c5eff;
+}
+
+* {
+  font-family: 'Quicksand', sans-serif !important;
 }
 
 .App {
@@ -43,4 +47,9 @@ root {
   to {
     transform: rotate(360deg);
   }
+}
+
+html {
+  background-color: var(--blue-yonder);
+  font-size: 1.6rem;
 }

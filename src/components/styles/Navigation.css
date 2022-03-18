@@ -1,0 +1,21 @@
+.card-container {
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--atomic-tangerine);
+}
+
+.card-box {
+  height: 40vh;
+  width: 70%;
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.card-grid {
+  width: 50%;
+}
