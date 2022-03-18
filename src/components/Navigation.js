@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -8,23 +8,43 @@ import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import "./styles/Navigation.css";
+import Dashboard from "./../pages/Dashboard";
+import Reservation from "./../pages/Reservation";
+import Restaurant from "./../pages/Restaurant";
+import SpaFitness from "./../pages/SpaFitness";
+import Happenings from "./../pages/Happenings";
 
 const drawerWidth = 300;
 
-export default function Navigation({ currentPage, handlePageChange }) {
+export default function Navigation() {
+  const [currentPage, setCurrentPage] = useState("DASHBOARD");
+
+  const renderPage = () => {
+    if (currentPage === "DASHBOARD") {
+      return <Dashboard />;
+    }
+    if (currentPage === "MY RESERVATION") {
+      return <Reservation />;
+    }
+    if (currentPage === "RESTAURANT") {
+      return <Restaurant />;
+    }
+    if (currentPage === "SPA + FITNESS") {
+      return <SpaFitness />;
+    }
+    if (currentPage === "HAPPENINGS") {
+      return <Happenings />;
+    }
+  };
+
+  const handlePageChange = (page) => setCurrentPage(page);
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
         position="fixed"
         sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
-      >
-        {/* <Toolbar>
-          <Typography variant="h6" noWrap component="div">
-            Permanent drawer
-          </Typography>
-        </Toolbar> */}
-      </AppBar>
+      ></AppBar>
       <Drawer
         sx={{
           width: drawerWidth,
@@ -38,22 +58,25 @@ export default function Navigation({ currentPage, handlePageChange }) {
         anchor="left"
       >
         <Toolbar />
-        <h1>🌠</h1>
-        <Divider />
-        <List>
-          {["DASHBOARD", "MY RESERVATION", "SPA + FITNESS", "HAPPENINGS"].map(
-            (text, index) => (
-              <ListItem>
-                <button
-                  className={`btn${index}`}
-                  onClick={() => handlePageChange(text)}
-                >
-                  {text}
-                </button>
-              </ListItem>
-            )
-          )}
-        </List>
+        <h1 onClick={() => handlePageChange("DASHBOARD")}>🌠</h1>
+        <ul>
+          {[
+            "DASHBOARD",
+            "MY RESERVATION",
+            "RESTAURANT",
+            "SPA + FITNESS",
+            "HAPPENINGS",
+          ].map((text, index) => (
+            <li>
+              <button
+                className={`btn${index + 1} btn-style`}
+                onClick={() => handlePageChange(text)}
+              >
+                {text}
+              </button>
+            </li>
+          ))}
+        </ul>
         <Divider />
       </Drawer>
       {/* <div className="card-container">
@@ -64,6 +87,7 @@ export default function Navigation({ currentPage, handlePageChange }) {
           <div className="card-grid">four</div>
         </Box>
       </div> */}
+      {renderPage()}
     </Box>
   );
 }

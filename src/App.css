@@ -1,13 +1,15 @@
 :root {
-  --blue-yonder: #586ba4ff;
-  --dark-cornflower-blue: #324376ff;
-  --buff: #f5dd90ff;
-  --atomic-tangerine: #f68e5fff;
-  --bittersweet: #f76c5eff;
+  --color1: #586ba4ff;
+  --color2: #324376ff;
+  --color3: #f5dd90ff;
+  --color4: #f68e5fff;
+  --color5: #f76c5eff;
 }
 
 * {
   font-family: 'Quicksand', sans-serif !important;
+  margin: 0;
+  padding: 0;
 }
 
 .App {
@@ -50,6 +52,27 @@
 }
 
 html {
-  background-color: var(--blue-yonder);
   font-size: 1.6rem;
+}
+
+.card-container {
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--atomic-tangerine);
+}
+
+.card-box {
+  height: 40vh;
+  width: 70%;
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.card-grid {
+  width: 50%;
 }
