@@ -7,26 +7,34 @@ export function Happenings() {
       <Box className="card-box">
         <div className="card-grid">
           <p className="card-emoji">💼</p>
-          <p className="card-caption">events</p>
+          <button className="color5-button">
+            TODAY'S
+            <br />
+            EVENTS
+          </button>
         </div>
         <div className="card-grid">
           <p className="card-emoji">🎶</p>
-          <p className="card-caption">
-            live
+          <button className="color5-button">
+            LIVE
             <br />
-            music
-          </p>
+            MUSIC
+          </button>
         </div>
         <div className="card-grid">
           <p className="card-emoji">🗞️</p>
-          <p className="card-caption">news</p>
+          <button className="color5-button">
+            TODAY'S
+            <br />
+            NEWS
+          </button>
         </div>
         <div className="card-grid">
           <p className="card-emoji">🌳</p>
-          <p className="card-caption">
-            hikes
-            <br />+ views
-          </p>
+          <button className="color5-button">
+            HIKES
+            <br />+ VIEWS
+          </button>
         </div>
       </Box>
     </div>

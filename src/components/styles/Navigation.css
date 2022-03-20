@@ -3,8 +3,6 @@
   height: 75px;
   font-size: 1rem;
   border: none;
-  overflow-x: visible;
-  /* border: 1px inset black; */
 }
 
 .btn1 {
@@ -36,16 +34,30 @@ ul {
   padding-top: 150px;
 }
 
+/* for nav items */
 .active {
-  color: aliceblue;
+  color: white;
+  text-shadow: 0px 0px 5px grey;
 }
 
+/* wrapper div to position the settings button */
 .setting-div {
   height: 100%;
   display: flex;
   align-items: flex-end;
 }
 
+/* sets the color of the settings icon */
 .icon {
   color: var(--color5);
+}
+
+.icon-button {
+  border-radius: 50%;
+  margin: 5px;
+}
+
+/* this got rid of the white border on the right side of the navbar :) */
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+  border-right: none !important;
 }

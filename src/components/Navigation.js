@@ -1,24 +1,24 @@
 import React, { useState } from "react";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import CssBaseline from "@mui/material/CssBaseline";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import "./styles/Navigation.css";
+import {
+  Box,
+  Drawer,
+  CssBaseline,
+  AppBar,
+  Toolbar,
+  Divider,
+} from "@mui/material";
+import SettingsIcon from "@mui/icons-material/Settings";
 import Dashboard from "./../pages/Dashboard";
 import Reservation from "./../pages/Reservation";
 import Restaurant from "./../pages/Restaurant";
 import SpaFitness from "./../pages/SpaFitness";
 import Happenings from "./../pages/Happenings";
-import SettingsIcon from "@mui/icons-material/Settings";
+import "./styles/Navigation.css";
 
-const drawerWidth = "30%";
+const drawerWidth = "25%";
 
 export default function Navigation() {
-  const [active, setActive] = useState(false);
+  // const [active, setActive] = useState(false);
   const [currentPage, setCurrentPage] = useState("DASHBOARD");
 
   const renderPage = () => {
@@ -85,7 +85,9 @@ export default function Navigation() {
         </ul>
         <Divider />
         <div className="setting-div">
-          <SettingsIcon className="icon" />
+          <button className="icon-button">
+            <SettingsIcon fontSize="large" className="icon" />
+          </button>
         </div>
       </Drawer>
       {renderPage()}

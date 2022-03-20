@@ -7,35 +7,35 @@ export function SpaFitness() {
       <Box className="card-box">
         <div className="card-grid">
           <p className="card-emoji">🏊‍♀️</p>
-          <p className="card-caption">
-            pool
+          <button className="color4-button">
+            POOL
             <br />
-            hours
-          </p>
+            HOURS
+          </button>
         </div>
         <div className="card-grid">
           <p className="card-emoji">🏋️</p>
-          <p className="card-caption">
-            gym
+          <button className="color4-button">
+            GYM
             <br />
-            hours
-          </p>
+            HOURS
+          </button>
         </div>
         <div className="card-grid">
           <p className="card-emoji">💆‍♀️</p>
-          <p className="card-caption">
-            book
+          <button className="color4-button">
+            BOOK
             <br />
-            an appt
-          </p>
+            AN APPT
+          </button>
         </div>
         <div className="card-grid">
           <p className="card-emoji">💬</p>
-          <p className="card-caption">
-            fitness
+          <button className="color4-button">
+            FITNESS
             <br />
-            desk
-          </p>
+            DESK
+          </button>
         </div>
       </Box>
     </div>

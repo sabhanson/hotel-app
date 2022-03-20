@@ -33,7 +33,7 @@ body {
 .dashboard {
   height: 100vh;
   display: flex;
-  width: 70%;
+  width: 75%;
   justify-content: flex-end;
   align-items: flex-start;
   background-color: var(--atomic-tangerine);
@@ -54,7 +54,7 @@ body {
 .card-container {
   height: 100vh;
   display: flex;
-  width: 70%;
+  width: 75%;
   justify-content: center;
   align-items: center;
   background-color: var(--atomic-tangerine);
@@ -68,7 +68,7 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  border-radius: 10px;
+  box-shadow: 0px 0px 30px -7px white;
 }
 
 .card-grid {
@@ -85,4 +85,33 @@ body {
 .card-caption {
   margin-top: 8px;
   font-size: 0.8rem;
+}
+
+.color2-button,
+.color3-button,
+.color4-button,
+.color5-button {
+  font-size: 0.6rem;
+  width: 150px;
+  font-weight: 400;
+  padding: 3px;
+  color: white;
+}
+
+.color2-button {
+  background-color: var(--color2);
+}
+
+.color3-button {
+  background-color: var(--color3);
+  color: black;
+}
+
+.color4-button {
+  background-color: var(--color4);
+  color: black;
+}
+
+.color5-button {
+  background-color: var(--color5);
 }

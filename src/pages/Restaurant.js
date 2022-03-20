@@ -7,27 +7,35 @@ export function Restaurant() {
       <Box className="card-box">
         <div className="card-grid">
           <p className="card-emoji">🍲</p>
-          <p className="card-caption">
-            weekly
+          <button className="color3-button">
+            WEEKLY
             <br />
-            specials
-          </p>
+            SPECIALS
+          </button>
         </div>
         <div className="card-grid">
           <p className="card-emoji">🍽️</p>
-          <p className="card-caption">hours</p>
+          <button className="color3-button">
+            TODAY'S
+            <br />
+            HOURS
+          </button>
         </div>
         <div className="card-grid">
           <p className="card-emoji">📜</p>
-          <p className="card-caption">menu</p>
+          <button className="color3-button">
+            OUR
+            <br />
+            MENU
+          </button>
         </div>
         <div className="card-grid">
           <p className="card-emoji">💬</p>
-          <p className="card-caption">
-            host
+          <button className="color3-button">
+            HOST
             <br />
-            stand
-          </p>
+            STAND
+          </button>
         </div>
       </Box>
     </div>

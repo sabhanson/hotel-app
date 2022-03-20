@@ -7,35 +7,35 @@ export function Reservation() {
       <Box className="card-box">
         <div className="card-grid">
           <p className="card-emoji">📋</p>
-          <p className="card-caption">
-            reservation
+          <button className="color2-button">
+            RESERVATION
             <br />
-            details
-          </p>
+            DETAILS
+          </button>
         </div>
         <div className="card-grid">
           <p className="card-emoji">🧹</p>
-          <p className="card-caption">
-            request
+          <button className="color2-button">
+            REQUEST
             <br />
-            housekeeping
-          </p>
+            HOUSEKEEPING
+          </button>
         </div>
         <div className="card-grid">
           <p className="card-emoji">🔔</p>
-          <p className="card-caption">
-            check
+          <button className="color2-button">
+            CHECK
             <br />
-            status
-          </p>
+            STATUS
+          </button>
         </div>
         <div className="card-grid">
           <p className="card-emoji">💬</p>
-          <p className="card-caption">
-            front
+          <button className="color2-button">
+            FRONT
             <br />
-            desk
-          </p>
+            DESK
+          </button>
         </div>
       </Box>
     </div>
